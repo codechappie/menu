@@ -37,6 +37,8 @@ header{
     height: 4px;
     background-color: rgb(94, 94, 94);
     border-radius: 40px;
+    user-select: none;
+    outline: none;
 }
 .menu__mobile .first{
     top: 10px;
@@ -84,6 +86,22 @@ header{
 .menu__responsive__mobile{
     display: none;
 }
+/*QUITAR SELECCION AZUL*/
+textarea, select, input, button { 
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+:focus { 
+    outline-color: transparent; 
+    outline-style: none;
+}
+/*QUITAR SELECCION AZUL*/
+
+.contentInfo{
+    width: 86%;
+    margin: 20px auto;
+}
+
 @media screen and (max-width: 1000px){
     html{
         overflow-x: hidden;
@@ -108,22 +126,22 @@ header{
     }
     .menu__responsive__mobile #mini__menu{
         font-size: 20px;
-        height: 100vh;
+        height: 50vh;
     }
     .menu__responsive__mobile #mini__menu ul{
-        height: 50vh;
+        height: 40vh;
         display: grid;
         align-items: center;
     }
     .menu__responsive__mobile #mini__menu button{
-        height: 10vh;
+        height: 15vh;
         width: 60%;
         margin: auto;
         display: grid;
         align-items: center;
         border-radius: 40px;
         background-color: #fff;
-        padding: 15px 30px;
+        padding: 10px 30px;
         border-radius: 30px;
         border: none;
         border: 1px solid rgb(2, 224, 195);
@@ -132,7 +150,7 @@ header{
         cursor: pointer;
         font-weight: 700;
         font-size: 16px;
-        margin-top: 10px;
+        margin-top: 2px;
     }
     .menu__responsive__mobile #mini__menu li{
         text-align: center;
@@ -142,15 +160,11 @@ header{
         color: #000;
         font-size: 25px;
     }
-    .logo__mobile{
-
-    }
     .close{
         width: 85%;
         margin: auto;
         font-size: 100px;
         font-weight: 700;
-        padding: 40px 0px;
         color: #333;
         user-select: none;
         animation: slide 0.5s forwards;
@@ -186,5 +200,52 @@ header{
     
     @keyframes slideright {
         100% { left: 100vw; }
+    }
+    
+}
+@media screen and (max-width: 1000px) and (orientation: portrait){
+    .close{
+        width: 85%;
+        margin: auto;
+        font-size: 100px;
+        font-weight: 700;
+        padding: 7vh 0px 2vh 0px!important;
+        color: #333;
+        user-select: none;
+        animation: slide 0.5s forwards;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu__responsive__mobile #mini__menu ul{
+        height: 50vh;
+        display: grid;
+        align-items: center;
+    }
+    .menu__responsive__mobile #mini__menu button{
+        height: 10vh;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 1000px) and (orientation: landscape){
+    .close{
+        width: 85%;
+        margin: auto;
+        font-size: 100px;
+        font-weight: 700;
+        padding: 13vh 0px 2vh 0px;
+        color: #333;
+        user-select: none;
+        animation: slide 0.5s forwards;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #buttonclose img{
+        margin-right: 10px;
+    }
+    .menu__responsive__mobile #mini__menu a{
+        font-size: 16px;
+        height: 50vh;
+        font-weight: 700;
+        color: rgb(75, 75, 75);
     }
 }
