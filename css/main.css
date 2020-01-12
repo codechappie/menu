@@ -94,16 +94,12 @@ header{
     .menu__mobile{
         display: block;
     }
-    .phone{
-        overflow: hidden;
-        position: relative;
-    }
     .menu__responsive__mobile{
-        position: absolute;
+        position: fixed;
         display: block;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.288);
+        background-color: rgb(255, 255, 255);
         z-index: 9999;;
         left: 0vw;
         top: 0;
@@ -112,28 +108,62 @@ header{
     }
     .menu__responsive__mobile #mini__menu{
         font-size: 20px;
-        background-color: rgb(167, 167, 167);
+        height: 100vh;
     }
-    #mini_menu a{
-        color: #fff;
+    .menu__responsive__mobile #mini__menu ul{
+        height: 50vh;
+        display: grid;
+        align-items: center;
+    }
+    .menu__responsive__mobile #mini__menu button{
+        height: 10vh;
+        width: 60%;
+        margin: auto;
+        display: grid;
+        align-items: center;
+        border-radius: 40px;
+        background-color: #fff;
+        padding: 15px 30px;
+        border-radius: 30px;
+        border: none;
+        border: 1px solid rgb(2, 224, 195);
+        background-color: transparent;
+        color: rgb(2, 224, 195);
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .menu__responsive__mobile #mini__menu li{
+        text-align: center;
+    }
+    .menu__responsive__mobile #mini__menu a{
+        text-decoration: none;
+        color: #000;
+        font-size: 25px;
+    }
+    .logo__mobile{
+
     }
     .close{
-        width: 80%;
+        width: 85%;
         margin: auto;
-        text-align: right;
-        font-size: 90px;
+        font-size: 100px;
         font-weight: 700;
-        right: 20;
-        top: 20;
+        padding: 40px 0px;
         color: #333;
         user-select: none;
         animation: slide 0.5s forwards;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #buttonclose{
+        justify-self: right;
     }
     .close button{
         border: none;
         background-color: transparent;
         font-weight: 700;
-        font-size: 40px;
         color: rgb(78, 78, 78);
     }
     .show{
