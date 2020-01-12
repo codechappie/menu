@@ -85,6 +85,9 @@ header{
     display: none;
 }
 @media screen and (max-width: 1000px){
+    html{
+        overflow-x: hidden;
+    }
     #menu{
         display: none;
     }
@@ -96,15 +99,16 @@ header{
         position: relative;
     }
     .menu__responsive__mobile{
+        position: absolute;
         display: block;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.562);
-        z-index: 9999;
-        position: absolute;
+        background-color: rgba(255, 255, 255, 0.288);
+        z-index: 9999;;
         left: 0vw;
         top: 0;
         animation: slideright 0.5s forwards;
+        overflow: hidden;
     }
     .menu__responsive__mobile #mini__menu{
         font-size: 20px;
